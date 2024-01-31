@@ -415,6 +415,10 @@ h1.invisible {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
+  border: 0.864px solid #d66567;
+  background: #bc4749;
+  display: flex;
+  gap: 13.5px;
 }
 .pricing-block-item:nth-child(2) .start:hover {
   -webkit-box-shadow: none;

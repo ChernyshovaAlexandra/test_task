@@ -57,7 +57,10 @@
 
         .start {
             @include button-with-shadow();
-
+            border: 0.864px solid #d66567;
+            background: #bc4749;
+            display: flex;
+            gap: 13.5px;
             img {
                 width: 16px;
                 height: 16px;
