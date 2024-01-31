@@ -232,6 +232,8 @@ h1.invisible {
   cursor: default;
 }
 .header-inner .login {
+  position: relative;
+  z-index: 11;
   display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;

@@ -92,6 +92,8 @@
         }
     }
     .login {
+        position: relative;
+        z-index: 11;
         display: none;
         @media screen and (min-width: 768px) {
             display: -webkit-box;
