@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+$primary-color: #6a994e;
+$secondary-color: #d0d0d0;
+$font-family: "Inter", sans-serif;
+
+// Миксин для текста
+@mixin text-styles($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: normal;
+    font-family: $font-family;
+}
+
+// Миксин для градиента с тенью
+@mixin gradient-box-shadow($start-color, $end-color) {
+    background: -o-linear-gradient(297deg, $start-color 35.82%, $end-color 107.75%);
+    background: linear-gradient(153deg, $start-color 35.82%, $end-color 107.75%);
+    -webkit-box-shadow:
+        0 -9.631px 86.681px 0 rgba(0, 0, 0, 0.1),
+        0 23.115px 240.782px 0 rgba(0, 0, 0, 0.05);
+    box-shadow:
+        0 -9.631px 86.681px 0 rgba(0, 0, 0, 0.1),
+        0 23.115px 240.782px 0 rgba(0, 0, 0, 0.05);
+}
+
+// Миксин для окна с радиусом и тенью
+@mixin rounded-box($radius, $box-shadow) {
+    border-radius: $radius;
+    -webkit-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
+
+// Миксин для кнопок с тенью при наведении
+@mixin button-with-shadow() {
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    border-radius: 7px;
+    border: 0.864px solid $secondary-color;
+    background: $primary-color;
+    -webkit-box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 214px;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 12px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin: 0 auto;
+
+    &:hover {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+// Миксин для появления блоков по загрузке страницы
+@mixin showBlock($delay, $duration) {
+    opacity: 0;
+    -webkit-animation: makeVisible $duration ease-in $delay forwards;
+    animation: makeVisible $duration ease-in $delay forwards;
+}
+
+@-webkit-keyframes makeVisible {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes makeVisible {
+    to {
+        opacity: 1;
+    }
+}

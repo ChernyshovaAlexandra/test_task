@@ -1,0 +1,124 @@
+.header-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px 0 0;
+    @media screen and (min-width: 768px) {
+        padding: 34.55px 0 46.5px;
+    }
+
+    nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 87.23px;
+        position: relative;
+
+        .logo {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 3.61px;
+
+            img {
+                width: 23.493px;
+                height: 15.658px;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .nav-list {
+            list-style: none;
+            display: none;
+            @media screen and (min-width: 840px) {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                .mobile{
+                    display: none;
+                }
+            }
+            &.opened {
+                display: block;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                left: 0;
+                padding: 6rem 15px 15px;
+                top: 0;
+                bottom: 0;
+            }
+            gap: 48.36px;
+
+            .nav-item {
+                text-decoration: none;
+                @include text-styles(#fff, 1.2rem, 400);
+                margin-bottom: 1.5rem;
+                display: block;
+                text-align: center;
+
+                @media screen and (min-width: 840px) {
+                    @include text-styles(#fff, 12.091px, 400);
+                    margin-bottom: 0;
+                    text-align: initial;
+                    display: inline;
+                }
+                opacity: 0.8;
+                &:not(.active):hover {
+                    text-decoration: underline;
+                }
+                &.active {
+                    font-weight: 600;
+                    cursor: default;
+                }
+            }
+        }
+    }
+    .login {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 13.82px;
+        a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+    .login-button {
+        @include button-with-shadow();
+        background: #bc4749;
+        border: 0.864px solid #d66567;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: 114px;
+        &:hover {
+            background: #a83638;
+        }
+    }
+}
