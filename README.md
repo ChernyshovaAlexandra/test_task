@@ -2,7 +2,7 @@
 
 ## Установка
 
-1. Клонировать репозиторий: `git clone https://github.com/ChernyshovaAlexandra/test_task.git.git`
+1. Клонировать репозиторий: `git clone https://github.com/ChernyshovaAlexandra/test_task.git`
 2. Установить зависимости: `npm install`
 
 ## Запуск
